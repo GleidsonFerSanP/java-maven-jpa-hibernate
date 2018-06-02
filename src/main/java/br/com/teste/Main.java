@@ -16,6 +16,9 @@ public class Main {
 		Cliente cliente = new Cliente();
 		em.getTransaction().begin();
 		cliente.setNome("Muller Antunes");
+		
+		em.persist(cliente);
+		
 		em.getTransaction().commit();
 		
 		System.out.println("Cliente alterado com sucesso!");
